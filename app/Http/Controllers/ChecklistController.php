@@ -31,7 +31,7 @@ class ChecklistController extends Controller
         if (!$deleted)
             return response("Delete Failed!", 400);
 
-        return response("Success to Delete this Checklist!", 201);
+        return response("Success to Delete this Checklist!", 204);
     }
 
     public function index(){

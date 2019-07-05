@@ -81,7 +81,7 @@ class ChecklistItemController extends Controller
         if (!$deleted)
             return response("Delete Failed!", 400);
 
-        return response("Success to Delete this Checklist Item!", 201);
+        return response("Success to Delete this Checklist Item!", 204);
     }
 
     public function incomplete(Request $request)

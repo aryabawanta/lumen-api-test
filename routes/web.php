@@ -24,19 +24,6 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     $router->post('/login',  ['uses' => 'AuthController@login']);
 });
 
-//$router->group(['prefix' => 'users'], function () use ($router) {
-//    $router->get('',  ['uses' => 'UserController@index']);
-//    $router->get('/{id}',  ['uses' => 'UserController@show']);
-//});
-
-//$router->group(['prefix' => 'templates'], function () use ($router) {
-//    $router->get('', 'TemplateController@index');
-//    $router->get('/{id}', 'TemplateController@show');
-//    $router->post('', 'TemplateController@create');
-//    $router->patch('/{id}', 'TemplateController@update');
-//    $router->delete('/{id}', 'TemplateController@delete');
-//});
-
 $router->group(['prefix' => 'checklists'], function () use ($router) {
     $router->get('', 'ChecklistController@index');
     $router->post('', 'ChecklistController@create');

@@ -35,7 +35,7 @@ class ChecklistTemplateController extends Controller
         if (!$deleted)
             return response("Delete Failed!", 400);
 
-        return response("Success to Delete this Checklist Template!", 201);
+        return response("Success to Delete this Checklist Template!", 204);
     }
 
     public function index(){
