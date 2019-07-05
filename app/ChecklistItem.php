@@ -8,9 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
 
-class User extends Model implements AuthenticatableContract, AuthorizableContract
+class ChecklistItem extends Model implements AuthenticatableContract, AuthorizableContract
 {
     use Authenticatable, Authorizable;
+
+    protected $table = 'checklist_item';
 
     /**
      * The attributes that are mass assignable.
@@ -18,7 +20,7 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $fillable = [
-        'username', 'email' ,'name', 'password'
+        'checklist_id', 'description', 'urgency', 'due', 'is_completed', 'completed_at', 'created_by' , 'updated_by'
     ];
 
     /**
@@ -27,6 +29,5 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
      * @var array
      */
     protected $hidden = [
-        'password',
     ];
 }
